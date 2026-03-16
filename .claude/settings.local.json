@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx claude-code-templates@latest --skill creative-design/ui-ux-pro-max)",
+      "Bash(npm create vite@latest guest-guide -- --template react-ts)",
+      "Bash(npm install)",
+      "Bash(npm install -D tailwindcss postcss autoprefixer)",
+      "Bash(npx tailwindcss init -p)",
+      "Bash(npm install framer-motion react-icons)",
+      "Bash(npm run dev)",
+      "Bash(npm uninstall tailwindcss)",
+      "Bash(npm install -D tailwindcss@3 postcss autoprefixer)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
