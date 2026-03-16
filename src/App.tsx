@@ -13,9 +13,12 @@ import {
   FaPaw,
   FaPlug,
   FaCalendarCheck,
-  FaUmbrellaBeach
+  FaUmbrellaBeach,
+  FaHiking,
+  FaPhone
 } from 'react-icons/fa';
 import { MdRestaurant } from 'react-icons/md';
+import { GiWaterfall, GiSailboat } from 'react-icons/gi';
 import './App.css';
 
 function App() {
@@ -155,6 +158,164 @@ function App() {
             link="https://www.booking.com/hotel/br/maori-pousada.pt-br.html"
           />
         </div>
+
+        {/* Restaurants Section */}
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="text-center mb-10">
+            <MdRestaurant className="text-5xl text-maori-coral mx-auto mb-4" />
+            <h2 className="text-3xl font-display font-bold text-maori-dark mb-3">
+              Restaurantes Recomendados
+            </h2>
+            <p className="text-gray-600">
+              Sabores imperdíveis próximos à pousada
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <InfoCard
+              icon={<MdRestaurant />}
+              title="Sebasthiana Beach Bar"
+              color="coral"
+              highlight={true}
+              items={[
+                "Ambiente descontraído 'pé na areia' de frente para o mar",
+                "Especialidade: Frutos do mar e linguado grelhado",
+                "Serviço de praia com astral único do litoral",
+                "📍 Praia de Boiçucanga (Rua Capitão Salinas, 80)"
+              ]}
+            />
+            <InfoCard
+              icon={<MdRestaurant />}
+              title="Acarajé da Nê"
+              color="orange"
+              highlight={true}
+              items={[
+                "Autêntica comida baiana com ambiente colorido",
+                "Especialidade: Acarajé, moquecas e bobó de camarão",
+                "Buffet e à la carte com sabor da Bahia",
+                "📍 Praia de Boiçucanga (Rua Benjamin Manoel dos Santos, 96)"
+              ]}
+            />
+          </div>
+        </motion.div>
+
+        {/* Boat Tour Contact */}
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+        >
+          <div className="bg-gradient-to-br from-maori-turquoise to-blue-500 rounded-2xl shadow-xl p-8 text-white text-center">
+            <GiSailboat className="text-6xl mx-auto mb-4" />
+            <h3 className="text-3xl font-display font-bold mb-3">
+              Passeio de Barco
+            </h3>
+            <p className="text-lg mb-4 opacity-90">
+              Explore as ilhas paradisíacas da região (Ilha das Couves, Montão de Trigo)
+            </p>
+            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 inline-block">
+              <FaPhone className="inline-block mr-2" />
+              <a href="tel:+5512982614502" className="text-xl font-semibold hover:underline">
+                +55 12 98261-4502
+              </a>
+              <p className="text-sm mt-1 opacity-90">(Rodrigo)</p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Trails and Waterfalls Section */}
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="text-center mb-10">
+            <div className="flex justify-center gap-4 mb-4">
+              <FaHiking className="text-5xl text-maori-orange" />
+              <GiWaterfall className="text-5xl text-maori-turquoise" />
+            </div>
+            <h2 className="text-3xl font-display font-bold text-maori-dark mb-3">
+              Trilhas e Cachoeiras
+            </h2>
+            <p className="text-gray-600">
+              Aventure-se pela natureza exuberante da região
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <InfoCard
+              icon={<GiWaterfall />}
+              title="Cachoeiras do Ribeirão de Itu"
+              color="turquoise"
+              highlight={true}
+              items={[
+                "Complexo de quedas d'água na Mata Atlântica",
+                "Inclui: Hidromassagem, Pedra Lisa e Samambaiaçu (20m)",
+                "Trilha fácil/moderada: ~2km (40-60 min)",
+                "Piscinas naturais de águas cristalinas",
+                "📍 Boiçucanga"
+              ]}
+            />
+            <InfoCard
+              icon={<FaHiking />}
+              title="Trilha Maresias - Paúba"
+              color="coral"
+              items={[
+                "Trilha famosa e acessível entre duas praias",
+                "Mirante de Maresias com vista panorâmica",
+                "Duração: 30-40 minutos",
+                "Nível: Fácil com subida leve",
+                "📍 Inicia no canto norte de Maresias"
+              ]}
+            />
+            <InfoCard
+              icon={<FaHiking />}
+              title="Trilha da Praia Brava"
+              color="orange"
+              items={[
+                "Leva à praia mais isolada e preservada",
+                "Praia deserta cercada por encostas verdes",
+                "Duração: ~1 hora de caminhada",
+                "Nível: Moderado com trechos íngremes",
+                "Mirante com vista para as ilhas no caminho"
+              ]}
+            />
+            <InfoCard
+              icon={<GiWaterfall />}
+              title="Cachoeira de Camburi"
+              color="yellow"
+              items={[
+                "Localizada no Sertão do Cacau, Camburi",
+                "Queda d'água charmosa com poço profundo",
+                "Refúgio de paz em meio à mata",
+                "Trilha curta e fácil",
+                "📍 Final da estrada do Sertão do Cacau"
+              ]}
+            />
+            <InfoCard
+              icon={<FaUmbrellaBeach />}
+              title="Praia da Baleia"
+              color="turquoise"
+              items={[
+                "Praia exclusiva e tranquila",
+                "Águas calmas (esquerda) e ondas (direita)",
+                "Ideal para esportes, caminhadas e ciclismo",
+                "Stand-up paddle e caiaque",
+                "Ambiente residencial sem comércio agitado"
+              ]}
+            />
+          </div>
+        </motion.div>
 
         {/* Beaches Section */}
         <motion.div
