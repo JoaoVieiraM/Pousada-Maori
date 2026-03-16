@@ -9,7 +9,14 @@
       "Bash(npm install framer-motion react-icons)",
       "Bash(npm run dev)",
       "Bash(npm uninstall tailwindcss)",
-      "Bash(npm install -D tailwindcss@3 postcss autoprefixer)"
+      "Bash(npm install -D tailwindcss@3 postcss autoprefixer)",
+      "Bash(git push origin main)",
+      "Bash(rm -rf src)",
+      "Bash(mv guest-guide/* .)",
+      "Bash(mv guest-guide/.* .)",
+      "Bash(rmdir guest-guide)",
+      "Bash(git add -A)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nReorganize project structure: move guest-guide to root for Vercel deployment\n\nMoved all guest-guide project files to the root directory to enable proper Vercel deployment. The project is now ready for deployment with all configuration files at the correct location.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []
