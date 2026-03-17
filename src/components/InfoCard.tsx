@@ -8,9 +8,10 @@ interface InfoCardProps {
   color: 'turquoise' | 'coral' | 'orange' | 'yellow';
   highlight?: boolean;
   link?: string;
+  image?: string;
 }
 
-const InfoCard = ({ icon, title, items, color, highlight = false, link }: InfoCardProps) => {
+const InfoCard = ({ icon, title, items, color, highlight = false, link, image }: InfoCardProps) => {
   const colorClasses = {
     turquoise: {
       bg: 'bg-maori-turquoise',
@@ -56,6 +57,17 @@ const InfoCard = ({ icon, title, items, color, highlight = false, link }: InfoCa
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
     >
+      {/* Image (if provided) */}
+      {image && (
+        <div className="mb-4 -mx-6 -mt-6 rounded-t-2xl overflow-hidden">
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-40 object-cover"
+          />
+        </div>
+      )}
+
       {/* Icon */}
       <div className={`${colors.bg} w-14 h-14 rounded-xl flex items-center justify-center mb-4 text-white text-2xl shadow-md`}>
         {icon}

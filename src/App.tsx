@@ -258,6 +258,7 @@ function App() {
               title="Cachoeiras do Ribeirão de Itu"
               color="turquoise"
               highlight={true}
+              image="/cachoeiraribeiraodeitu.webp"
               items={[
                 "Complexo de quedas d'água na Mata Atlântica",
                 "Inclui: Hidromassagem, Pedra Lisa e Samambaiaçu (20m)",
@@ -270,6 +271,7 @@ function App() {
               icon={<FaHiking />}
               title="Trilha Maresias - Paúba"
               color="coral"
+              image="/trilhapauba.jpg"
               items={[
                 "Trilha famosa e acessível entre duas praias",
                 "Mirante de Maresias com vista panorâmica",
@@ -282,6 +284,7 @@ function App() {
               icon={<FaHiking />}
               title="Trilha da Praia Brava"
               color="orange"
+              image="/praia-brava.jpg"
               items={[
                 "Leva à praia mais isolada e preservada",
                 "Praia deserta cercada por encostas verdes",
@@ -294,24 +297,13 @@ function App() {
               icon={<GiWaterfall />}
               title="Cachoeira de Camburi"
               color="yellow"
+              image="/cachoeirariodaspedras(sertaocambury).webp"
               items={[
                 "Localizada no Sertão do Cacau, Camburi",
                 "Queda d'água charmosa com poço profundo",
                 "Refúgio de paz em meio à mata",
                 "Trilha curta e fácil",
                 "📍 Final da estrada do Sertão do Cacau"
-              ]}
-            />
-            <InfoCard
-              icon={<FaUmbrellaBeach />}
-              title="Praia da Baleia"
-              color="turquoise"
-              items={[
-                "Praia exclusiva e tranquila",
-                "Águas calmas (esquerda) e ondas (direita)",
-                "Ideal para esportes, caminhadas e ciclismo",
-                "Stand-up paddle e caiaque",
-                "Ambiente residencial sem comércio agitado"
               ]}
             />
           </div>
@@ -358,7 +350,8 @@ function App() {
               info={{
                 profile: "Praia selvagem e deserta, cercada por Mata Atlântica preservada. Acesso apenas por trilha (aprox. 1 hora de caminhada com nível moderado) ou barco.",
                 sea: "Ondas fortes e agitadas, muito procurada por surfistas.",
-                highlight: "Natureza intocada e isolamento total (não há quiosques ou vendedores)."
+                highlight: "Natureza intocada e isolamento total (não há quiosques ou vendedores).",
+                activities: "Trilha: Nível moderado com trechos íngremes partindo de Boiçucanga (~1h). No caminho há um mirante com vista espetacular para as ilhas."
               }}
             />
             <BeachCard
@@ -400,27 +393,23 @@ function App() {
                 infrastructure: "Completa, com hotéis de luxo, pousadas, bares e restaurantes variados."
               }}
             />
+            <BeachCard
+              name="Praia da Baleia"
+              distance="12 km"
+              walkTime="~20 min de carro"
+              color="yellow"
+              image="/praia-da-baleia.jpg"
+              info={{
+                profile: "Uma das praias mais exclusivas e tranquilas de São Sebastião. Larga faixa de areia compacta, ideal para esportes.",
+                sea: "Águas claras e calmas no canto esquerdo (ideal para crianças e natação) e ondas mais constantes no canto direito (bom para surfistas iniciantes).",
+                highlight: "Perfeita para caminhadas, corridas e andar de bicicleta na areia. Ambiente estritamente residencial garantindo paz e sossego.",
+                activities: "Stand-up paddle, caiaque e observação da natureza.",
+                infrastructure: "Sem comércio ambulante agitado, proporcionando tranquilidade total."
+              }}
+            />
           </div>
         </motion.div>
 
-        {/* Emergency Contact */}
-        <motion.div
-          className="bg-white rounded-2xl shadow-xl p-8 text-center border-2 border-maori-turquoise"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-        >
-          <h3 className="text-2xl font-display font-bold text-maori-dark mb-4">
-            Precisa de Ajuda?
-          </h3>
-          <p className="text-gray-600 mb-4">
-            Nossa equipe está sempre disponível para atendê-lo!
-          </p>
-          <p className="text-lg font-semibold text-maori-turquoise">
-            Entre em contato com a recepção
-          </p>
-        </motion.div>
       </motion.div>
 
       <Footer />
