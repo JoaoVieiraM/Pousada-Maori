@@ -11,16 +11,13 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {/* Turtle Icon */}
-          <div className="mb-4 flex justify-center">
-            <svg viewBox="0 0 100 100" className="w-12 h-12 opacity-50">
-              <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="2" />
-              <circle cx="50" cy="50" r="12" fill="none" stroke="currentColor" strokeWidth="2" />
-              <circle cx="38" cy="42" r="3" fill="currentColor" />
-              <circle cx="62" cy="42" r="3" fill="currentColor" />
-              <circle cx="38" cy="58" r="3" fill="currentColor" />
-              <circle cx="62" cy="58" r="3" fill="currentColor" />
-            </svg>
+          {/* Logo */}
+          <div className="mb-6 flex justify-center">
+            <img
+              src="/logo-maori.png"
+              alt="Pousada Maori Logo"
+              className="h-20 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
+            />
           </div>
 
           <p className="text-sm opacity-75 mb-2">
