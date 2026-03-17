@@ -15,7 +15,8 @@ import {
   FaCalendarCheck,
   FaUmbrellaBeach,
   FaHiking,
-  FaPhone
+  FaPhone,
+  FaWhatsapp
 } from 'react-icons/fa';
 import { MdRestaurant } from 'react-icons/md';
 import { GiWaterfall, GiSailboat } from 'react-icons/gi';
@@ -221,12 +222,23 @@ function App() {
             <p className="text-lg mb-4 opacity-90">
               Explore as ilhas paradisíacas da região (Ilha das Couves, Montão de Trigo)
             </p>
-            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 inline-block">
+            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 inline-block mb-4">
               <FaPhone className="inline-block mr-2" />
               <a href="tel:+5512982614502" className="text-xl font-semibold hover:underline">
                 +55 12 98261-4502
               </a>
               <p className="text-sm mt-1 opacity-90">(Rodrigo)</p>
+            </div>
+            <div>
+              <a
+                href="https://wa.me/5512982614502?text=Olá! Gostaria de informações sobre o passeio de barco."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+              >
+                <FaWhatsapp className="text-2xl" />
+                <span>Chamar no WhatsApp</span>
+              </a>
             </div>
           </div>
         </motion.div>
