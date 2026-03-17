@@ -147,19 +147,73 @@ function App() {
             ]}
           />
 
-          <InfoCard
-            icon={<FaWhatsapp />}
-            title="Reserve Conosco"
-            color="turquoise"
-            highlight={true}
-            items={[
-              "Entre em contato direto com a pousada",
-              "Faça sua reserva pelo WhatsApp",
-              "Atendimento personalizado!"
-            ]}
-            link="https://wa.me/5512988194446?text=Olá! Gostaria de fazer uma reserva na Pousada Maori."
-          />
         </div>
+
+        {/* WhatsApp Reservation CTA */}
+        <motion.div
+          className="mt-8"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="bg-gradient-to-br from-green-500 via-green-600 to-emerald-600 rounded-2xl shadow-2xl p-8 text-white text-center relative overflow-hidden">
+            {/* Animated background effect */}
+            <motion.div
+              className="absolute inset-0 bg-white/10"
+              animate={{
+                backgroundPosition: ['0% 0%', '100% 100%'],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                repeatType: 'reverse',
+              }}
+              style={{
+                backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+                backgroundSize: '50px 50px',
+              }}
+            />
+
+            <div className="relative z-10">
+              <motion.div
+                animate={{
+                  scale: [1, 1.1, 1],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatType: 'reverse',
+                }}
+              >
+                <FaWhatsapp className="text-7xl mx-auto mb-4 drop-shadow-lg" />
+              </motion.div>
+
+              <h3 className="text-3xl font-display font-bold mb-3">
+                Reserve Conosco!
+              </h3>
+              <p className="text-lg mb-6 opacity-95">
+                Entre em contato direto com a pousada • Atendimento personalizado
+              </p>
+
+              <motion.a
+                href="https://wa.me/5512988194446?text=Olá! Gostaria de fazer uma reserva na Pousada Maori."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-white text-green-600 font-bold text-xl px-8 py-4 rounded-full transition-all duration-300 shadow-2xl hover:shadow-white/50 hover:scale-110"
+                whileHover={{ y: -5 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaWhatsapp className="text-3xl" />
+                <span>Fazer Reserva pelo WhatsApp</span>
+              </motion.a>
+
+              <p className="text-sm mt-4 opacity-90">
+                📱 +55 12 98819-4446
+              </p>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Restaurants Section */}
         <motion.div
