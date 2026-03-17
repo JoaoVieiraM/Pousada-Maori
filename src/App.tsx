@@ -233,7 +233,7 @@ function App() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <InfoCard
               icon={<MdRestaurant />}
               title="Sebasthiana Beach Bar"
@@ -258,6 +258,19 @@ function App() {
                 "Especialidade: Acarajé, moquecas e bobó de camarão",
                 "Buffet e à la carte com sabor da Bahia",
                 "📍 Praia de Boiçucanga (Rua Benjamin Manoel dos Santos, 96)"
+              ]}
+            />
+            <InfoCard
+              icon={<MdRestaurant />}
+              title="Bar da Praia"
+              color="turquoise"
+              highlight={true}
+              image="/bardapraia.jpg"
+              items={[
+                "Autêntica experiência 'pé na areia' com vista espetacular para o pôr do sol",
+                "Especialidade: Peixes, frutos do mar e ótimos drinks",
+                "Mesas na areia, clima romântico e ideal para happy hour",
+                "📍 Praia de Boiçucanga (Rua Ex Combatente Paulo Nunes dos Passos, 25)"
               ]}
             />
           </div>
