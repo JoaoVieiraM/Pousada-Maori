@@ -148,15 +148,16 @@ function App() {
           />
 
           <InfoCard
-            icon={<MdRestaurant />}
+            icon={<FaWhatsapp />}
             title="Reserve Conosco"
             color="turquoise"
             highlight={true}
             items={[
-              "Faça sua próxima reserva pelo Booking.com",
-              "Avalie sua experiência!"
+              "Entre em contato direto com a pousada",
+              "Faça sua reserva pelo WhatsApp",
+              "Atendimento personalizado!"
             ]}
-            link="https://www.booking.com/hotel/br/maori-pousada.pt-br.html"
+            link="https://wa.me/5512988194446?text=Olá! Gostaria de fazer uma reserva na Pousada Maori."
           />
         </div>
 
@@ -184,6 +185,7 @@ function App() {
               title="Sebasthiana Beach Bar"
               color="coral"
               highlight={true}
+              image="/restaurante-sebasthiana.jpg"
               items={[
                 "Ambiente descontraído 'pé na areia' de frente para o mar",
                 "Especialidade: Frutos do mar e linguado grelhado",
@@ -196,6 +198,7 @@ function App() {
               title="Acarajé da Nê"
               color="orange"
               highlight={true}
+              image="/acaraje-da-ne.webp"
               items={[
                 "Autêntica comida baiana com ambiente colorido",
                 "Especialidade: Acarajé, moquecas e bobó de camarão",
@@ -270,7 +273,7 @@ function App() {
               title="Cachoeiras do Ribeirão de Itu"
               color="turquoise"
               highlight={true}
-              image="/cachoeiraribeiraodeitu.webp"
+              image="/cachoeira-ribeirao-itu.webp"
               items={[
                 "Complexo de quedas d'água na Mata Atlântica",
                 "Inclui: Hidromassagem, Pedra Lisa e Samambaiaçu (20m)",
@@ -283,7 +286,7 @@ function App() {
               icon={<FaHiking />}
               title="Trilha Maresias - Paúba"
               color="coral"
-              image="/trilhapauba.jpg"
+              image="/trilha-pauba.jpg"
               items={[
                 "Trilha famosa e acessível entre duas praias",
                 "Mirante de Maresias com vista panorâmica",
@@ -309,7 +312,7 @@ function App() {
               icon={<GiWaterfall />}
               title="Cachoeira de Camburi"
               color="yellow"
-              image="/cachoeirariodaspedras(sertaocambury).webp"
+              image="/cachoeira-camburi.webp"
               items={[
                 "Localizada no Sertão do Cacau, Camburi",
                 "Queda d'água charmosa com poço profundo",
